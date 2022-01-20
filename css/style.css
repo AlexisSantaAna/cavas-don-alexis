@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    max-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2a172c;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 2rem;
+    z-index: 1;
+    border-bottom: white 4px solid;
+}
+
+.logoContenedor img{
+    width: 100px;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: #a08b5b;
+    padding-right: 28px;
+}
+
+.contactLinks {
+    margin-left: 70px;
+}
+
+/* FIN HEADER */
+
+/* SECTION */
+
+.imgPrincipal {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imgContenedor {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo,
+.parrafoTitulo {
+    color: white;
+    position: absolute;
+}
+
+.titulo {
+    font-size: 100px;
+    margin-top: 34rem;
+    padding: 15px 15px 15px 70px;
+}
+
+.parrafoTitulo {
+    font-size: 25px;
+    margin-top: 47rem;
+    padding: 15px 70px;
+}
+
+.btn {
+    color: #a08b5b;
+}
+
+.contactDetails {
+    margin-left: 20px;
+}
+
+/* FIN SECTION */
+
+/* FOOTER */
+
+footer {
+    background-color: #2a172c;
+    color: white;
+    padding: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.textFooter {
+    padding: .4rem;
+    line-height: 2;
+}
+
+/* FIN FOOTER */
+
