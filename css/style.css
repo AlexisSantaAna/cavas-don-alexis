@@ -59,6 +59,7 @@ nav ul li a{
 
 .contactLinks {
     margin-left: 70px;
+    font-size: 1.8rem;
 }
 
 .contactDetails {
@@ -212,12 +213,14 @@ nav ul li a{
     min-height: 60vh;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .gridContenedor {
     max-width: 70%;
     margin: auto;
     font-size: 1.8rem;
+    padding: 40px 0 50px 0;
 }
 
 .gridNosotros {
@@ -251,9 +254,42 @@ footer {
 
 /* FIN FOOTER */
 
+/* CONTACT FORM */
+
+.form {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.form div input {
+    padding: 5px;
+    font-weight: normal;
+    font-size: 2.5rem;
+    border: 1px solid #a08b5b;
+}
+
+#asunto {
+    width: 60vw;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 2.5rem;
+    border: 1px solid #a08b5b;
+}
+
+/* FIN CONTACT FORM */
+
 /* MEDIA QUERYS */
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
     header .logoContenedor img {
         position: static;
         top: none;
@@ -264,14 +300,41 @@ footer {
     .contenedorSectionIndex {
         max-width: 70%;
     }
+    .contenedorSectionIndex,
+    .contenedorSectionIndex2 {
+        padding: 40px 0 60px 0;
+    }
     .titulo {
-        font-size: 8rem;
+        font-size: 10rem;
+        margin-top: 20rem;
+        padding: 10px 10px 10px 50px;
     }    
     .parrafoTitulo {
-        font-size: 2.1rem;
+        font-size: 2.3rem;
+        margin-top: 33rem;
+        padding: 10px 50px;
     }
     .gridContenedor {
         max-width: 80%;
+    }
+    
+    /* NAV RESPONSIVE */
+    
+    nav ul {
+        margin-right: 2rem;
+    }
+    
+    nav ul li a {
+        padding: 1rem;
+    }
+    .contactLinks {
+        margin-left: 40px;        
+        font-size: 1.4rem;
+    }
+    
+    .contactDetails {
+        color: #a08b5b;
+        padding: 1.2rem;
     }
 }
 
@@ -314,6 +377,9 @@ footer {
     }
     .gridContenedor {
         max-width: 90%;
+    }
+    .textFooter {
+        font-size: 1.2rem;
     }
 }
 

@@ -15,11 +15,11 @@
     <header class="header">
         <div class="contactLinks">
             <a href="https://www.facebook.com" target="_blank" class="contactDetails icon1"><i
-                    class="fa-brands fa-facebook fa-lg"></i></a>
+                    class="fa-brands fa-facebook fa-2x"></i></a>
             <a href="https://www.instagram.com" target="_blank" class="contactDetails"><i
-                    class="fa-brands fa-instagram fa-lg"></i></a>
+                    class="fa-brands fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com" target="_blank" class="contactDetails icon3"><i
-                    class="fa-brands fa-twitter fa-lg"></i></a>
+                    class="fa-brands fa-twitter fa-2x"></i></a>
         </div>
         <div class="logoContenedor">
             <a href="../index.html"><img src="../images/logo violeta.png" alt="logo vinos" class="logo"></a>
@@ -39,17 +39,19 @@
             <h1>Contacto</h1>
             <p>¿Comentarios o sugerencias?</p>
         </article>
-        <h1>Formulario</h1>
-        <form action="#">
-            <div>
-                <input type="text" name="name" id="name" placeholder="NOMBRE" required>
+        <form class="form" action="#">
+            <div class="inputContainer">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="NOMBRE" required>
+                </div>
+                <div>
+                    <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" required>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
+                </div>
             </div>
-            <div>
-                <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" required>
-            </div>
-            <div>
-                <input type="email" name="email" id="email" placeholder="EMAIL" required>
-            </div>
+            
             <div>
                 <select name="asunto" id="asunto">
                     <option disabled selected>ASUNTO</option>
