@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 html {
     font-size: 62.5%;
@@ -16,41 +15,46 @@ html {
 
 /* HEADER */
 
-header {
+.header {
     position: fixed;
     display: flex;
-    top: 0;
-    left: 0;
     width: 100%;
-    max-height: 90px;    
+    min-height: 70px;    
     align-items: center;
     justify-content: space-between;
     background: #2a172c;
     background-repeat: no-repeat;
-    width: 100%;
     font-size: 2rem;
     z-index: 1;
     border-bottom: #f4f4f4 4px solid;
 }
 
-.logoContenedor img{
+.logoContenedor img {
     width: 100px;
+}
+
+header .logoContenedor img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav ul {
     display: flex;
     flex-wrap: nowrap;
+    margin-right: 6rem;
 }
 
 nav ul li{
-    display: inline-block;
+    display: inline-block; 
 }
 
 nav ul li a{
     text-decoration: none;
     list-style: none;
     color: #a08b5b;
-    padding-right: 28px;
+    padding: 2rem;
 }
 
 .contactLinks {
@@ -59,7 +63,7 @@ nav ul li a{
 
 .contactDetails {
     color: #a08b5b;
-    margin-left: 20px;
+    padding: 2rem;
 }
 
 /* FIN HEADER */
@@ -67,7 +71,7 @@ nav ul li a{
 /* SECTION PRINCIPAL*/
 
 .imgPrincipal {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     object-fit: cover;
 }
@@ -101,6 +105,7 @@ nav ul li a{
 
 .imgIndex {
     max-width: 50rem;
+    width: 100%;
 }
 
 /* FIN SECTION PRINCIPAL*/
@@ -146,37 +151,48 @@ nav ul li a{
     text-align: center;
 }
 
+
 .contenedorSectionIndex2 {
     background: url(../images/3.jpg) center center/cover no-repeat fixed;
     max-width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    margin: auto;
+    text-align: center;
 }
 
 .contenedorSectionIndex2 div {
     display: flex;
     flex-direction: column;
     line-height: 2;
-    max-width: 40%;
+    max-width: 45%;
     margin: auto;
 }
 
 .titulo2 {
     color: #9a855b;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .contenedorSectionIndex p {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .contenedorSectionIndex2 p {
     color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 } 
 
 .btn {
     background: #9a855b;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    padding: 5px 24px;
+    padding: .5rem 2.5rem;
     font-family: "Roboto", Sans-serif;
     font-weight: 500;
 }
@@ -211,6 +227,7 @@ nav ul li a{
 .gridBtn {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* FOOTER */
@@ -236,12 +253,67 @@ footer {
 
 /* MEDIA QUERYS */
 
+@media screen and (max-width: 1600px) {
+    header .logoContenedor img {
+        position: static;
+        top: none;
+        left: none;
+        transform: none;
+    }
+    .contenedorSectionIndex2 div,
+    .contenedorSectionIndex {
+        max-width: 70%;
+    }
+    .titulo {
+        font-size: 8rem;
+    }    
+    .parrafoTitulo {
+        font-size: 2.1rem;
+    }
+    .gridContenedor {
+        max-width: 80%;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    .contenedorSectionIndex p,
+    .contenedorSectionIndex2 p {
+        font-size: 1.7rem;
+    }
+    .titulo2 {
+        font-size: 3.8rem;
+    }
     .grid {
-        grid-template-columns: 1fr;        
+        grid-template-columns: 1fr;
+        padding: 15px;      
     }
     .header {
         display: none;
+    }
+    .imgIndex {
+        width: 100%;
+        margin: 40px 0;
+    }
+    .contenedorSectionIndex2 div,
+    .contenedorSectionIndex {
+        max-width: 90%;
+    }
+    .contenedorSectionIndex,
+    .contenedorSectionIndex2 {
+        padding: 40px 0 60px 0;
+    }
+    .titulo {
+        font-size: 6rem;
+        margin-top: 25rem;
+        padding: 10px 10px 10px 50px;
+    }    
+    .parrafoTitulo {
+        font-size: 1.7rem;
+        margin-top: 35rem;
+        padding: 10px 50px;
+    }
+    .gridContenedor {
+        max-width: 90%;
     }
 }
 
