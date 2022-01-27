@@ -115,7 +115,7 @@ nav ul li a{
     max-width: 100%;
     margin: auto;
     text-align: center;
-    background: url(../img/contacto2.jpg) center center/cover no-repeat fixed;
+    background: url(../images/contacto2.jpg) center center/cover no-repeat fixed;
 }
 
 .contenedorContactoPrincipal h1 {
@@ -145,7 +145,7 @@ nav ul li a{
 }
 
 .contenedorSectionIndex2 {
-    background: url(../img/3.jpg) center center/cover no-repeat fixed;
+    background: url(../images/3.jpg) center center/cover no-repeat fixed;
     max-width: 100%;
 }
 
@@ -231,4 +231,10 @@ footer {
 }
 
 /* FIN FOOTER */
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width: 600px) {
+    
+}
 
