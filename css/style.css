@@ -18,9 +18,11 @@ html {
 
 header {
     position: fixed;
-    top: 0;
-    max-height: 90px;
     display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 90px;    
     align-items: center;
     justify-content: space-between;
     background: #2a172c;
@@ -65,7 +67,7 @@ nav ul li a{
 /* SECTION PRINCIPAL*/
 
 .imgPrincipal {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     object-fit: cover;
 }
@@ -76,7 +78,7 @@ nav ul li a{
 }
 
 .imgPrincipalContacto {
-    height: 60vh;
+    min-height: 60vh;
 }
 
 .titulo,
@@ -106,7 +108,7 @@ nav ul li a{
 /* CONTACTO */
 
 .contenedorContactoPrincipal {
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +135,7 @@ nav ul li a{
 /* SECTION INDEX */
 
 .contenedorSectionIndex {
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,7 +193,7 @@ nav ul li a{
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 60vh;
+    min-height: 60vh;
     align-items: center;
     text-align: center;
 }
@@ -203,7 +205,7 @@ nav ul li a{
 }
 
 .gridNosotros {
-    height: 180vh;
+    min-height: 180vh;
 }
 
 .gridBtn {
@@ -234,7 +236,12 @@ footer {
 
 /* MEDIA QUERYS */
 
-@media screen and (max-width: 600px) {
-    
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;        
+    }
+    .header {
+        display: none;
+    }
 }
 
