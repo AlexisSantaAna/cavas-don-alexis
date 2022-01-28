@@ -105,8 +105,9 @@ nav ul li a{
 }
 
 .imgIndex {
-    max-width: 50rem;
     width: 100%;
+    max-height: 100%;
+    background: no-repeat;
 }
 
 /* FIN SECTION PRINCIPAL*/
@@ -114,7 +115,7 @@ nav ul li a{
 /* CONTACTO */
 
 .contenedorContactoPrincipal {
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,6 +206,10 @@ nav ul li a{
 
 /* FIN SECTION INDEX */
 
+/* SECTION NOSOTROS */
+
+/* FIN SECTION NOSOTROS */
+
 /*GRID SECTION*/
 
 .grid {
@@ -257,31 +262,96 @@ footer {
 /* CONTACT FORM */
 
 .form {
-    height: 50vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: 2.5;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239a855b' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .inputContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
+    justify-content: space-between;
+    width: 60%;
 }
 
-.form div input {
-    padding: 5px;
+.inputSelect {    
+    margin-top: 10px;
+    color: #9a855b;
+}
+
+.inputSelect:focus {
+    color: #9a855b;
+    outline: none !important;
+    box-shadow: 5px 5px 10px #1414149b;
+}
+
+.inputText {
+    margin-top: 10px;
+    width: 59%;
+    resize: none;
+}
+
+.inputSend,
+.inputReset {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+#submit,
+#reset {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: 500;    
+    margin: 0 0 0 20px;
+}
+
+#name::placeholder,
+#lastname::placeholder,
+#email::placeholder,
+.inputText::placeholder {
+    color: #9a855b;
+}
+
+#name,
+#lastname,
+#email {
+    width: 30%;
+}
+
+.form div input,
+.inputText {
+    padding: 12px 8px 12px 8px;
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border: 1px solid #a08b5b;
 }
 
+#name:focus,
+#lastname:focus,
+#email:focus,
+.inputText:focus {
+    color: #9a855b;
+    outline: none !important;
+    box-shadow: 5px 5px 10px #1414149b;
+}
+
+input, select, textarea{
+    color: #9a855b;
+}
+
 #asunto {
-    width: 60vw;
-    padding: 5px;
+    width: 60%;
+    padding: 12px 8px 12px 8px;
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border: 1px solid #a08b5b;
 }
 
@@ -313,6 +383,12 @@ footer {
         font-size: 2.3rem;
         margin-top: 33rem;
         padding: 10px 50px;
+    }
+    .contenedorContactoPrincipal h1 {        
+        font-size: 9rem;
+    }    
+    .contenedorContactoPrincipal p {
+        font-size: 2.7rem;
     }
     .gridContenedor {
         max-width: 80%;
@@ -375,11 +451,44 @@ footer {
         margin-top: 35rem;
         padding: 10px 50px;
     }
+    .contenedorContactoPrincipal h1 {        
+        font-size: 8rem;
+    }    
+    .contenedorContactoPrincipal p {
+        font-size: 2.5rem;
+    }
     .gridContenedor {
         max-width: 90%;
     }
     .textFooter {
         font-size: 1.2rem;
+    }
+    /* FORM */
+    .inputContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #name,
+    #lastname,
+    #email {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form div input,
+    .inputText {
+        padding: 9px 7px 9px 7px;
+        font-size: 1.5rem;
+    }
+    #submit,
+    #reset {
+        font-size: 1.5rem;
+        padding: 8px 17px;
+    }  
+    #asunto {
+        padding: 9px 8px 9px 8px;
+        font-size: 1.5rem;
+        width: 64.5%;
     }
 }
 

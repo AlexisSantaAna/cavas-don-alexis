@@ -8,7 +8,7 @@
     <title>Cavas Don Alexis</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -41,35 +41,23 @@
         </article>
         <form class="form" action="#">
             <div class="inputContainer">
-                <div>
-                    <input type="text" name="name" id="name" placeholder="NOMBRE" required>
-                </div>
-                <div>
-                    <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" required>
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
-                </div>
+                <input type="text" name="name" id="name" placeholder="NOMBRE" required>
+                <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" required>
+                <input type="email" name="email" id="email" placeholder="EMAIL" required>
             </div>
-            
-            <div>
-                <select name="asunto" id="asunto">
-                    <option disabled selected>ASUNTO</option>
-                    <option value="consultas">Consultas</option>
-                    <option value="visitaYAlmuerzo">Visita y almuerzo</option>
-                    <option value="visitaYDegustacion">Visita y degustación</option>
-                    <option value="degustaciones">Degustaciones</option>
-                    <option value="atardeceres">Atardeceres</option>
-                    <option value="restaurante">Restaurante</option>
-                </select>
-            </div>
-            <div>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="MENSAJE"></textarea>
-            </div>
-            <div>
-                <input type="submit" id="submit" value="Enviar">
-                <input type="reset" id="reset" value="Reestablecer">
-            </div>
+            <select class="inputSelect" name="asunto" id="asunto">
+                <option disabled selected>ASUNTO</option>
+                <option value="consultas">Consultas</option>
+                <option value="visitaYAlmuerzo">Visita y almuerzo</option>
+                <option value="visitaYDegustacion">Visita y degustación</option>
+                <option value="degustaciones">Degustaciones</option>
+                <option value="atardeceres">Atardeceres</option>
+                <option value="restaurante">Restaurante</option>
+            </select>
+            <textarea class="inputText" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="MENSAJE"></textarea>
+            <div class="inputSend inputReset">
+                <input class="btn" type="submit" id="submit" value="Enviar">
+                <input class="btn" type="reset" id ="reset" value="Reset">       
         </form>
     </section>
     <footer>
