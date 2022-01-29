@@ -10,7 +10,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;    
-    background-color: #f4f4f4;
+    background-color: #ebebeb;
 }
 
 /* HEADER */
@@ -105,39 +105,42 @@ nav ul li a{
 }
 
 .imgIndex {
-    width: 100%;
-    max-height: 100%;
-    background: no-repeat;
+    width: 75%;
+    border-radius: 20px;
 }
 
 /* FIN SECTION PRINCIPAL*/
 
-/* CONTACTO */
+/*GRID SECTION*/
 
-.contenedorContactoPrincipal {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
+.grid,
+.gridBodega {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 60vh;
     align-items: center;
-    justify-content: center;
-    line-height: 2;
-    max-width: 100%;
-    margin: auto;
     text-align: center;
-    background: url(../images/contacto2.jpg) center center/cover no-repeat fixed;
+    width: 100%;
 }
 
-.contenedorContactoPrincipal h1 {
-    color: white;
-    font-size: 10rem;
+.gridContenedor {
+    max-width: 70%;
+    margin: auto;
+    font-size: 1.8rem;
+    padding: 40px 0 50px 0;
 }
 
-.contenedorContactoPrincipal p {
-    font-size: 3rem;
-    color: white;
+.gridNosotros {
+    min-height: 180vh;
 }
 
-/* FIN CONTACTO */
+.gridBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIN GRID */
 
 /* SECTION INDEX */
 
@@ -204,39 +207,36 @@ nav ul li a{
     color: white;
 }
 
-/* FIN SECTION INDEX */
+/* FIN INDEX */
 
 /* SECTION NOSOTROS */
 
-/* FIN SECTION NOSOTROS */
+/* FIN NOSOTROS */
 
-/*GRID SECTION*/
+/* SECTION TURISMO */
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 60vh;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+.contenedorSectionTurismo {
+    min-height: 50vh;
 }
 
-.gridContenedor {
-    max-width: 70%;
-    margin: auto;
-    font-size: 1.8rem;
-    padding: 40px 0 50px 0;
+.contenedorSectionIndex2Turismo {
+    background: url(../images/turismo4.jpg) center center/cover no-repeat fixed;
 }
 
-.gridNosotros {
-    min-height: 180vh;
+/* FIN TURISMO */
+
+/* SECTION BODEGA */
+
+.gridBodega {
+    grid-template-columns: repeat(4,1fr);
 }
 
-.gridBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contenedorSectionBodega {
+    background: url(../images/bodega6.jpg) center center/cover no-repeat fixed;
 }
+
+
+/* FIN BODEGA */
 
 /* FOOTER */
 
@@ -258,6 +258,33 @@ footer {
 }
 
 /* FIN FOOTER */
+
+/* CONTACT SECTION */
+
+.contenedorContactoPrincipal {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    background: url(../images/contacto2.jpg) center center/cover no-repeat fixed;
+}
+
+.contenedorContactoPrincipal h1 {
+    color: white;
+    font-size: 10rem;
+}
+
+.contenedorContactoPrincipal p {
+    font-size: 3rem;
+    color: white;
+}
+
+/* FIN CONTACTO */
 
 /* CONTACT FORM */
 
@@ -359,7 +386,7 @@ input, select, textarea{
 
 /* MEDIA QUERYS */
 
-@media screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) {
     header .logoContenedor img {
         position: static;
         top: none;
@@ -394,6 +421,12 @@ input, select, textarea{
         max-width: 80%;
     }
     
+    /* SECTION TURISMO */
+
+    .contenedorSectionTurismo {
+        min-height: 40vh;
+    }
+
     /* NAV RESPONSIVE */
     
     nav ul {
@@ -414,7 +447,7 @@ input, select, textarea{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 575px) {
     .contenedorSectionIndex p,
     .contenedorSectionIndex2 p {
         font-size: 1.7rem;
@@ -424,13 +457,15 @@ input, select, textarea{
     }
     .grid {
         grid-template-columns: 1fr;
-        padding: 15px;      
+    }
+    .gridBodega {
+        grid-template-columns: repeat(2,1fr);
     }
     .header {
         display: none;
     }
-    .imgIndex {
-        width: 100%;
+     .imgIndex {                /* <------ imágenes de sections */
+        width: 90%;
         margin: 40px 0;
     }
     .contenedorSectionIndex2 div,
@@ -452,10 +487,10 @@ input, select, textarea{
         padding: 10px 50px;
     }
     .contenedorContactoPrincipal h1 {        
-        font-size: 8rem;
+        font-size: 7rem;
     }    
     .contenedorContactoPrincipal p {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .gridContenedor {
         max-width: 90%;
@@ -463,11 +498,19 @@ input, select, textarea{
     .textFooter {
         font-size: 1.2rem;
     }
+
     /* FORM */
+    .form {
+        min-height: 60vh;
+    }
     .inputContainer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 84%;
+    }
+    .inputText {
+        width: 84%;
     }
     #name,
     #lastname,
@@ -488,7 +531,8 @@ input, select, textarea{
     #asunto {
         padding: 9px 8px 9px 8px;
         font-size: 1.5rem;
-        width: 64.5%;
+        width: 87%;
+        background: white;
     }
 }
 
