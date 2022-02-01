@@ -235,7 +235,6 @@ nav ul li a{
     background: url(../images/bodega6.jpg) center center/cover no-repeat fixed;
 }
 
-
 /* FIN BODEGA */
 
 /* FOOTER */
@@ -265,8 +264,7 @@ footer {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     line-height: 2;
     max-width: 100%;
     margin: auto;
@@ -386,7 +384,7 @@ input, select, textarea{
 
 /* MEDIA QUERYS */
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1450px) {
     header .logoContenedor img {
         position: static;
         top: none;
@@ -427,6 +425,18 @@ input, select, textarea{
         min-height: 40vh;
     }
 
+    /* SECTION BODEGA */
+
+    .gridBodega {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* FORM */
+
+    .form {
+        padding: 5rem 0;
+    }
+
     /* NAV RESPONSIVE */
     
     nav ul {
@@ -457,9 +467,6 @@ input, select, textarea{
     }
     .grid {
         grid-template-columns: 1fr;
-    }
-    .gridBodega {
-        grid-template-columns: repeat(2,1fr);
     }
     .header {
         display: none;
