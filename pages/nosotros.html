@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body id="top1">
     <header class="header">
         <div class="contactLinks">
             <a href="https://www.facebook.com" target="_blank" class="contactDetails icon1"><i
@@ -27,7 +27,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="#top1">NOSOTROS</a></li>
                 <li><a href="turismo.html">TURISMO</a></li>
                 <li><a href="bodega.html">BODEGA</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
@@ -35,15 +35,16 @@
         </nav>
     </header>
     <section class="sectionWrap">
-        <article class="contenedorSectionPrincipal">
-            <h1 class="titulo">Nosotros</h1>
-            <p class="parrafoTitulo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Quaerat atque
-                mollitia ducimus.</p>
-            <div class="imgContenedor">
-                <img src="../images/nosotros2.jpg" alt="viñedos" class="imgPrincipal">
+        <article class="contenedorPrincipal contenedorPrincipalNosotros">
+            <div></div>
+            <div class="textCenter">
+                <h1>Nosotros</h1>
+                <p>Lorem ipsum</p>
             </div>
+            <a href="#nosotrosDown" class="contactDetails icon1 iconDown"><i
+                    class="fa-solid fa-circle-chevron-down fa-4x"></i></a>
         </article>
-        <article class="grid gridNosotros">
+        <article id="nosotrosDown" class="grid gridNosotros">
             <div class="gridContenedor">
                 <h2 class="titulo2">Un lugar con historia</h2>
                 <div>
@@ -75,7 +76,7 @@
                     vinos.
                     Realizarán degustaciones de nuestros vinos en el lugar donde nacen.
                 </p>
-            </div>            
+            </div>
             <div class="gridContenedor">
                 <h2 class="titulo2">Viví la experiencia</h2>
                 <div>

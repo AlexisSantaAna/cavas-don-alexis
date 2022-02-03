@@ -13,6 +13,9 @@
 
 <body id="top" class="container">
     <header class="header">
+        <div class="menuBtn">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
         <div class="contactLinks">
             <a href="https://www.facebook.com" target="_blank" class="contactDetails icon1"><i
                     class="fa-brands fa-facebook fa-2x"></i></a>
@@ -22,11 +25,11 @@
                     class="fa-brands fa-twitter fa-2x"></i></a>
         </div>
         <div class="logoContenedor">
-            <a href="#top"><img src="images/logo violeta.png" alt="logo vinos" class="logo logoHeader"></a>
+            <a href="index.html"><img src="images/logo violeta.png" alt="logo vinos" class="logo logoHeader"></a>
         </div>
         <nav>
-            <ul class="listaIndex">
-                <li><a href="index.html">HOME</a></li>
+            <ul class="navMenu">
+                <li><a href="#top">HOME</a></li>
                 <li><a href="pages/nosotros.html">NOSOTROS</a></li>
                 <li><a href="pages/turismo.html">TURISMO</a></li>
                 <li><a href="pages/bodega.html">BODEGA</a></li>
@@ -35,15 +38,16 @@
         </nav>
     </header>
     <section class="sectionWrap">
-        <article class="contenedorSectionPrincipal">
-            <h1 class="titulo">Texto</h1>
-            <p class="parrafoTitulo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Quaerat atque
-                mollitia ducimus.</p>
-            <div class="imgContenedor">
-                <img src="images/principal.jpg" alt="viñedos" class="imgPrincipal">
+        <article class="contenedorPrincipal">
+            <div></div>
+            <div class="textCenter">
+                <h1>Index</h1>
+                <p>Lorem ipsum</p>
             </div>
+            <a href="#indexDown" class="contactDetails icon1 iconDown"><i
+                    class="fa-solid fa-circle-chevron-down fa-4x"></i></a>
         </article>
-        <article class="contenedorSectionIndex">
+        <article id="indexDown" class="contenedorSectionIndex">
             <div>
                 <h2 class="titulo2">Cavas Don Alexis</h2>
                 <div>
@@ -92,7 +96,7 @@
                 </div>
             </div>
             <div>
-                <img src="images/index2.jpg" alt="separador dorado" class="imgIndex">
+                <img src="images/index2.jpg" alt="separad   or dorado" class="imgIndex">
             </div>
         </article>
     </section>
@@ -101,10 +105,11 @@
             <img src="images/logo violeta.png" alt="logo vinos" class="logo">
         </div>
         <div class="textFooter">
-            <p class="textCenter">Website designed & developed by <strong>Alexis Santa Ana</strong></p>
-            <p class="textCenter">&copy; Copyright 2021 Cavas de Don Alexis</p>
+            <p class="textFooter">Website designed & developed by <strong>Alexis Santa Ana</strong></p>
+            <p class="textFooter">&copy; Copyright 2021 Cavas de Don Alexis</p>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

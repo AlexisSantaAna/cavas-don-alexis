@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body id="top4">
     <header class="header">
         <div class="contactLinks">
             <a href="https://www.facebook.com" target="_blank" class="contactDetails icon1"><i
@@ -30,19 +30,19 @@
                 <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="turismo.html">TURISMO</a></li>
                 <li><a href="bodega.html">BODEGA</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="#top4">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
     <section class="sectionWrap">
-        <article class="contenedorContactoPrincipal">
+        <article class="contenedorPrincipal contenedorPrincipalContacto">
             <div></div>
             <div>
-                <h1 class="tituloCenter">Contacto</h1>
-            <p>¿Comentarios o sugerencias?</p>
-            </div>            
+                <h1>Contacto</h1>
+                <p>¿Comentarios o sugerencias?</p>
+            </div>
             <a href="#form" class="contactDetails icon1 iconDown"><i
-                class="fa-solid fa-circle-chevron-down fa-4x"></i></a>
+                    class="fa-solid fa-circle-chevron-down fa-4x"></i></a>
         </article>
         <form class="form" id="form" action="#">
             <div class="inputContainer">
@@ -59,10 +59,11 @@
                 <option value="atardeceres">Atardeceres</option>
                 <option value="restaurante">Restaurante</option>
             </select>
-            <textarea class="inputText" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="MENSAJE"></textarea>
+            <textarea class="inputText" name="mensaje" id="mensaje" cols="30" rows="10"
+                placeholder="MENSAJE"></textarea>
             <div class="inputSend inputReset">
                 <input class="btn" type="submit" id="submit" value="Enviar">
-                <input class="btn" type="reset" id ="reset" value="Reset">       
+                <input class="btn" type="reset" id="reset" value="Reset">
         </form>
     </section>
     <footer>
