@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 html {
     font-size: 62.5%;
@@ -27,7 +28,6 @@ html {
     background-repeat: no-repeat;
     font-size: 2rem;
     z-index: 1;
-    border-bottom: #f4f4f4 4px solid;
 }
 
 .logoContenedor img {
@@ -63,6 +63,10 @@ nav ul li a{
     font-size: 1.8rem;
 }
 
+.contactLinksMenu {
+    display: none;
+}
+
 .contactDetails {
     color: #a08b5b;
     padding: 2rem;
@@ -76,6 +80,10 @@ nav ul li a{
     z-index: 2;
     display: none;
     color: #f4f4f4;
+}
+
+.hr {
+    display: none;
 }
 
 /* FIN HEADER */
@@ -477,12 +485,28 @@ input, select, textarea{
         opacity: 0.9;
         line-height: 3;
         padding: 30px;
-        transform: translate(50px, 38px);        
+        transform: translate(50px, 34px);        
         text-align: center;
-        opacity: 0;     
+        opacity: 0;
+        visibility: hidden;
         transition: opacity .2s,visibility 0s .5s;
     }
-
+    .contactLinksMenu {
+        display: flex;
+        justify-content: center;
+    }
+    .contactLinksMenu a {
+        margin: 0 2rem 0 2rem;
+    }
+    .hr {
+        display: flex;
+        height: .1rem;
+        margin: 2rem 0 1rem 0;
+        background-color: #9a855b;
+        border: none;
+        width: 90%;
+        align-self: center;
+    }
     .show {
         /* transform: translate(650px,38px);  <--- alternativa de menú desplazable 
         display: flex; */
