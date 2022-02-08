@@ -236,6 +236,10 @@ nav ul li a{
     background: url(../images/turismo1.jpg) center center/cover no-repeat;
 }
 
+.contenedorSectionIndex2Turismo {
+    background: url(../images/turismo4.jpg) center center/cover no-repeat fixed;
+}
+
 /* FIN TURISMO */
 
 /* SECTION BODEGA */
@@ -551,6 +555,10 @@ input, select, textarea{
 
     .textFooter {
         font-size: 1.2rem;
+    }
+
+    .contenedorSectionIndex2Turismo {
+        background: url(../images/turismo44.jpg) center center/cover no-repeat fixed;
     }
 
     /* FORM */
