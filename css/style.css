@@ -55,7 +55,13 @@ nav ul li a{
     text-decoration: none;
     list-style: none;
     color: #a08b5b;
-    padding: 2rem;
+    padding: 2rem;    
+    text-shadow: 2px 2px 1px #141414;
+    transition: color .5s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
 }
 
 .contactLinks {
@@ -68,6 +74,25 @@ nav ul li a{
 }
 
 .contactDetails {
+    color: #a08b5b;
+    padding: 2rem;
+    text-shadow: 2px 2px 1px #141414;
+    transition: color .5s;
+}
+
+.contactDetails:hover {
+    color: #f4f4f4;
+}
+
+.contactDetails i {    
+    transition: transform .4s ease-out;
+}
+
+.contactDetails i:hover {
+    transform: translateY(8px);    
+}
+
+.iconWsp {
     color: #a08b5b;
     padding: 2rem;
 }
@@ -88,19 +113,61 @@ nav ul li a{
 
 /* FIN HEADER */
 
+/* UNDERLINE */ 
+
+ul li a {
+    position: relative;
+    display: block;
+    padding: 0.2em 0;
+  }
+  
+/* Fade in */
+ul li a::after {    
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #f4f4f4;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+  
+/* Slide in */
+li a {
+    overflow: hidden;
+  }
+  
+li a::after {
+    opacity: 1px;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+li a:hover::after,
+li a:focus::after{
+    transform: translate3d(0, 0, 0);
+  }
+/* FIN UNDERLINE*/
+
 /* SECTION PRINCIPAL*/
 
 .contenedorPrincipal {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    line-height: 2;
+    justify-content: center;
     max-width: 100%;
     margin: auto;
     text-align: center;
-    background: url(../images/principal.jpg) center center/cover no-repeat;
-}
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal.jpg) center center/cover no-repeat;
+}   
 
 .contenedorPrincipal h1 {
     color: white;
@@ -117,10 +184,27 @@ nav ul li a{
     border-radius: 20px;
 }
 
-.textCenter {
-    text-align: left;
-    margin-left: 8rem;
+.iconDownContact {
+    height: 35vh;
 }
+
+.iconDown {
+    animation: MoveUpDown 2s ease-in-out infinite;
+    position: absolute;
+    align-self: center;
+    color: #a08b5b;
+    padding: 2rem;
+    text-shadow: 1px 1px 1px #141414;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
 
 /* FIN SECTION PRINCIPAL*/
 
@@ -171,7 +255,7 @@ nav ul li a{
 
 
 .contenedorSectionIndex2 {
-    background: url(../images/3.jpg) center center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/3.jpg) center center/cover no-repeat fixed;
     max-width: 100%;
     min-height: 60vh;
     display: flex;
@@ -225,7 +309,7 @@ nav ul li a{
 /* SECTION NOSOTROS */
 
 .contenedorPrincipalNosotros {
-    background: url(../images/nosotros2.jpg) center center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/nosotros2.jpg) center center/cover no-repeat;
 }
 
 /* FIN NOSOTROS */
@@ -233,7 +317,7 @@ nav ul li a{
 /* SECTION TURISMO */
 
 .contenedorPrincipalTurismo {
-    background: url(../images/turismo1.jpg) center center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/turismo1.jpg) center center/cover no-repeat;
 }
 
 .contenedorSectionIndex2Turismo {
@@ -245,7 +329,7 @@ nav ul li a{
 /* SECTION BODEGA */
 
 .contenedorPrincipalBodega {
-    background: url(../images/bodega2.jpg) center center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/bodega2.jpg) center center/cover no-repeat;
 }
 
 .gridBodega {
@@ -414,10 +498,6 @@ input, select, textarea{
     .gridContenedor {
         max-width: 80%;
     }
-
-    .textCenter {
-        margin-left: 4rem;
-    }
     
     /* SECTION TURISMO */
 
@@ -547,10 +627,6 @@ input, select, textarea{
     }
     .gridContenedor {
         max-width: 90%;
-    }
-
-    .textCenter {
-        margin-left: 2rem;
     }
 
     .textFooter {
