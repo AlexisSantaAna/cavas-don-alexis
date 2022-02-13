@@ -1,18 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/* Arreglando bootstrap */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: inherit;
+}
+
+img {
+    vertical-align: unset !important;
+}
+
+dl, ol, ul {
+    margin-bottom: 0;
+}
+
+.main-text {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    color: #FFF;
+}
+
+/* texto principal */
+.main-text h1 {
+    font-size: 9rem;
+    font-weight: 600;
+}
+
+.main-text p {
+    font-size: 5rem;
+}
+
 /* GLOBAL */
 
 * {
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;    
+    font-family: 'Poppins', sans-serif;
 }
+
 html {
-    font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;    
+    font-size: 62.5%;  
     background-color: #ebebeb;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
+    font-family: 'Poppins', sans-serif;  
 }
 
 /* HEADER */
@@ -21,13 +61,13 @@ html {
     position: fixed;
     display: flex;
     width: 100%;
-    min-height: 70px;    
+    max-height: 70px;    
     align-items: center;
     justify-content: space-between;
     background: #2a172c;
     background-repeat: no-repeat;
     font-size: 2rem;
-    z-index: 1;
+    z-index: 5;
 }
 
 .logoContenedor img {
@@ -95,6 +135,10 @@ nav ul li a:hover {
 .iconWsp {
     color: #a08b5b;
     padding: 2rem;
+}
+
+.iconWsp:hover {
+    color: #9a855b;   /*<--------------------Luego ver algo para hacerle hover*/
 }
 
 .menuBtn{
@@ -192,6 +236,7 @@ li a:focus::after{
     animation: MoveUpDown 2s ease-in-out infinite;
     position: absolute;
     align-self: center;
+    margin-bottom: 1.5rem;
     color: #a08b5b;
     padding: 2rem;
     text-shadow: 1px 1px 1px #141414;
@@ -472,9 +517,72 @@ input, select, textarea{
 
 /* FIN CONTACT FORM */
 
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
+  }
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
 /* MEDIA QUERYS */
 
 @media only screen and (max-width: 1450px) {
+    /* texto principal */
+    .main-text h1 {
+        font-size: 7rem;
+    }
+    
+    .main-text p {
+        font-size: 3.6rem;
+    }
+
     header .logoContenedor img {
         position: static;
         top: none;
@@ -538,7 +646,25 @@ input, select, textarea{
 }
 
 @media only screen and (max-width: 575px) {
+    /* carrusel */
+
+    .carousel-item:nth-child(3) {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal44.jpg);
+    }
+    .carousel-item:nth-child(4) {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/principal22.jpg);
+    }
+    
     /* HEADER */
+
+    /* texto principal */
+    .main-text h1 {
+        font-size: 4.5rem;
+    }
+    
+    .main-text p {
+        font-size: 2.5rem;
+    }
 
     .contactLinks {
         display: none;
