@@ -142,10 +142,11 @@ nav ul li a:hover {
 .iconWsp {
     color: #a08b5b;
     padding: 2rem;
+    transition: all 0.3s ease 0s;;
 }
 
 .iconWsp:hover {
-    color: #9a855b;   /*<--------------------Luego ver algo para hacerle hover*/
+    color: #806f49;
 }
 
 .menuBtn{
@@ -221,7 +222,7 @@ li a:focus::after{
 }   
 
 .contenedorPrincipal h1 {
-    color: white;
+    color: #f4f4f4;
     font-size: 10rem;
 }
 
@@ -395,6 +396,12 @@ li a:focus::after{
     padding: .5rem 2.5rem;
     font-family: "Roboto", Sans-serif;
     font-weight: 500;
+    box-shadow: 2.5px 2.5px 5px #0303038a;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    background-color: #806f49;
 }
 
 .btn a {
@@ -410,6 +417,22 @@ li a:focus::after{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/nosotros2.jpg) center center/cover no-repeat;
 }
 
+.gridContenedor ul {
+    list-style-type: none;
+}
+
+.titulo3 {
+    color: #9a855b;
+    font-size: 2.5rem;
+    font-family: 'Rale';
+}
+
+.titulo2box {
+    font-size: 4rem;
+    font-weight: 400;   
+    font-family: 'Poppins';
+}
+
 /* FIN NOSOTROS */
 
 /* SECTION TURISMO */
@@ -419,7 +442,17 @@ li a:focus::after{
 }
 
 .contenedorSectionIndex2Turismo {
-    background: url(../images/turismo4.jpg) center center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/turismo4.jpg) center center/cover no-repeat fixed;
+}
+
+.contenedorSectionIndex2Turismo div h2 {
+    color: #fdca63;
+}
+
+.textLeft {
+    text-align: left;
+    margin-top: 1.5rem;
+
 }
 
 /* FIN TURISMO */
@@ -464,7 +497,6 @@ footer {
 }
 
 .textFooter {
-    padding: .4rem;
     line-height: 2;
 }
 
@@ -524,6 +556,7 @@ footer {
     padding: 10px 20px;
     font-weight: 500;    
     margin: 0 0 0 20px;
+    cursor: pointer;
 }
 
 #name::placeholder,
@@ -659,8 +692,18 @@ input, select, textarea{
     .gridContenedor {
         max-width: 80%;
     }
+
+    /* NOSOTROS */
+
+    .titulo3 {
+        font-size: 2.2rem;
+    }
     
-    /* SECTION TURISMO */
+    .titulo2box {
+        font-size: 3.6rem;
+    }
+    
+    /* TURISMO */
 
     .contenedorSectionTurismo {
         min-height: 40vh;
@@ -802,7 +845,7 @@ input, select, textarea{
         padding: 40px 0 60px 0;
     }
     .contenedorPrincipal h1 {        
-        font-size: 7rem;
+        font-size: 5.7rem;
     }    
     .contenedorPrincipal p {
         font-size: 2.2rem;
@@ -816,7 +859,7 @@ input, select, textarea{
     }
 
     .contenedorSectionIndex2Turismo {
-        background: url(../images/turismo44.jpg) center center/cover no-repeat fixed;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/turismo44.jpg) center center/cover no-repeat fixed;
     }
 
     /* FORM */
