@@ -1,0 +1,19 @@
+footer {
+    background-color: #2a172c;
+    color: white;
+    padding: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.logoContenedor img {
+    width: 100px;
+}
+
+.textFooter {
+    line-height: 2;
+}

@@ -1,0 +1,731 @@
+@import 'variables';
+@import 'buttons';
+@import 'header';
+@import 'footer';
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Arreglando bootstrap */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {    
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3);
+}
+
+p {
+    margin-bottom: inherit;
+}
+
+img {
+    vertical-align: unset !important;
+}
+
+dl, ol, ul {
+    margin-bottom: 0;
+}
+
+/* texto principal bootstrap*/
+
+.main-text {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    color: $color-blanco;
+
+    h1 {        
+        font-size: 9rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 5rem;
+    }
+}
+
+
+/* GLOBAL */
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;    
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;  
+    background-color: #ebebeb;
+    scroll-behavior: smooth;    
+    font-family: 'Poppins', sans-serif;  
+}
+
+/* SECTION PRINCIPAL*/
+
+.contenedorPrincipal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    h1 {
+        color: $color-blanco;
+        font-size: 10rem;
+    }
+    p {
+        font-size: 3rem;
+        color: white;
+    }
+}
+
+/* imágenes */
+
+.imgIndex {
+    width: 75%;
+    border:2px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+  
+.hoverImg {
+    opacity: 1;
+    transition: .3s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;  
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+  
+.imgContainer:hover .hoverImg {    
+	filter: grayscale(100%) blur(5px);
+    transform: scale(1.02);
+}
+  
+.imgContainer:hover .middle {
+    opacity: 1;
+}
+  
+.overlay {
+    color: rgb(0, 0, 0);
+    font-size: 4.2rem;
+    padding: .5rem 1rem;
+    user-select: none;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    background-color: #d8d6d46e;
+}
+
+
+.iconWsp {
+    color: $color-dorado;
+    padding: 2rem;
+    transition: all 0.3s ease 0s;;
+    &:hover {
+        color: $color-dorado2;
+    }
+}
+
+.iconDownContact {
+    height: 35vh;
+}
+
+.iconDown {
+    animation: MoveUpDown 2s ease-in-out infinite;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    align-self: center;
+    margin-bottom: 1.5rem;
+    color: $color-dorado;
+    padding: 2rem;
+    text-shadow: $sombra-texto;
+    &:hover {
+        color: $color-dorado2;
+    }
+}
+  
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+}
+
+/* FIN SECTION PRINCIPAL*/
+
+/*GRID SECTION*/
+
+.grid,
+.gridBodega {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 60vh;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.gridContenedor {
+    max-width: 70%;
+    margin: auto;
+    font-size: 1.8rem;
+    padding: 40px 0 50px 0;
+}
+
+.gridNosotros {
+    min-height: 180vh;
+}
+
+.gridBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIN GRID */
+
+/* SECTION INDEX */
+
+.contenedorSectionIndex {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.contenedorSectionIndex2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(../images/3.jpg) center center/cover no-repeat fixed;
+    max-width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    margin: auto;
+    text-align: center;
+}
+
+.contenedorSectionIndex2 div {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    max-width: 45%;
+    margin: auto;
+}
+
+.titulo2 {
+    color: $color-dorado3;
+    font-size: 5rem;
+}
+
+.contenedorSectionIndex p {
+    font-size: 2rem;
+}
+
+.contenedorSectionIndex2 p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* FIN INDEX */
+
+/* SECTION NOSOTROS */
+
+.contenedorPrincipalNosotros {
+    background: $gradiente-filtro,url(../images/nosotros2.jpg) center center/cover no-repeat;
+}
+
+.gridContenedor ul {
+    list-style-type: none;
+}
+
+.titulo3 {
+    color: $color-dorado3;
+    font-size: 2.5rem;
+    font-family: 'Rale';
+}
+
+.titulo2box {
+    font-size: 4rem;
+    font-weight: 400;   
+    font-family: 'Poppins';
+}
+
+/* FIN NOSOTROS */
+
+/* SECTION TURISMO */
+
+.contenedorPrincipalTurismo {
+    background: $gradiente-filtro,url(../images/turismo1.jpg) center center/cover no-repeat;
+}
+
+.contenedorSectionIndex2Turismo {
+    background: $gradiente-filtro,url(../images/turismo4.jpg) center center/cover no-repeat fixed;
+}
+
+.contenedorSectionIndex2Turismo div h2 {
+    color: #fdca63;
+}
+
+.textLeft {
+    text-align: left;
+    margin-top: 1.5rem;
+
+}
+
+/* FIN TURISMO */
+
+/* SECTION BODEGA */
+
+.contenedorPrincipalBodega {
+    background: $gradiente-filtro,url(../images/bodega2.jpg) center center/cover no-repeat;
+}
+
+.gridBodega {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.contenedorSectionBodega {
+    background: url(../images/bodega6.jpg) center center/cover no-repeat fixed;
+}
+
+/* FIN BODEGA */
+
+/* CONTACT SECTION */
+
+.contenedorPrincipalContacto {
+    background: $gradiente-filtro,url(../images/contacto2.jpg) center center/cover no-repeat fixed;
+    min-height: 70vh;
+}
+
+/* FIN CONTACTO */
+
+
+/* CONTACT FORM */
+
+.form {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239a855b' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    width: 60%;
+}
+
+.inputSelect {    
+    margin-top: 10px;
+    color: $color-dorado3;
+}
+
+.inputSelect:focus {
+    color: $color-dorado3;
+    outline: none !important;
+    box-shadow: 5px 5px 10px black;
+}
+
+.inputText {
+    margin-top: 10px;
+    width: 59%;
+    resize: none;
+}
+
+.inputSend,
+.inputReset {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+#submit,
+#reset {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: 500;    
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}
+
+#name::placeholder,
+#lastname::placeholder,
+#email::placeholder,
+.inputText::placeholder {
+    color: $color-dorado3;
+}
+
+#name,
+#lastname,
+#email {
+    width: 30%;
+}
+
+.form div input,
+.inputText {
+    padding: 12px 8px 12px 8px;
+    font-weight: normal;
+    font-size: 2rem;
+    border: 1px solid $color-dorado;
+}
+
+#name:focus,
+#lastname:focus,
+#email:focus,
+.inputText:focus {
+    color: $color-dorado3;
+    outline: none !important;
+    box-shadow: 5px 5px 10px black;
+}
+
+input, select, textarea{
+    color: $color-dorado3;
+}
+
+#asunto {
+    width: 59%;
+    padding: 12px 8px 12px 8px;
+    font-weight: normal;
+    font-size: 2rem;
+    border: 1px solid $color-dorado;
+}
+
+/* FIN CONTACT FORM */
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: $gradiente-filtro, url(../images/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: $gradiente-filtro, url(../images/principal3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(3) {
+    background-image: $gradiente-filtro, url(../images/principal4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(4) {
+    background-image: $gradiente-filtro, url(../images/principal2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(5) {
+    background-image: $gradiente-filtro, url(../images/principal6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
+  }
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+/* MEDIA QUERYS */
+
+@media only screen and (max-width: 1450px) {
+    /* texto principal */
+    .main-text h1 {
+        font-size: 7rem;
+    }
+    
+    .main-text p {
+        font-size: 3.6rem;
+    }
+
+    header .logoContenedor img {
+        position: static;
+        top: none;
+        left: none;
+        transform: none;
+    }
+    .contenedorSectionIndex2 div,
+    .contenedorSectionIndex {
+        max-width: 70%;
+    }
+    .contenedorSectionIndex,
+    .contenedorSectionIndex2 {
+        padding: 40px 0 60px 0;
+    }
+    .contenedorPrincipal h1 {        
+        font-size: 9rem;
+    }    
+    .contenedorPrincipal p {
+        font-size: 2.7rem;
+    }
+    .gridContenedor {
+        max-width: 80%;
+    }
+
+    /* NOSOTROS */
+
+    .titulo3 {
+        font-size: 2.2rem;
+    }
+    
+    .titulo2box {
+        font-size: 3.6rem;
+    }
+    
+    /* TURISMO */
+
+    .contenedorSectionTurismo {
+        min-height: 40vh;
+    }
+
+    /* FORM */
+
+    .form {
+        padding: 5rem 0;
+    }
+
+    /* NAV RESPONSIVE */
+    
+    nav ul {
+        margin-right: 2rem;
+    }
+    
+    nav ul li a {
+        padding: 1rem;
+    }
+    .contactLinks {
+        margin-left: 40px;        
+        font-size: 1.4rem;
+    }
+    
+    .contactDetails {
+        color: $color-dorado;
+        padding: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {    
+
+    /* SECTION BODEGA */
+
+    .gridBodega {
+        grid-template-columns: repeat(2,1fr);        
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    /* carrusel */
+
+    .carousel-item:nth-child(3) {
+        background-image: $gradiente-filtro,url(../images/principal44.jpg);
+    }
+    .carousel-item:nth-child(4) {
+        background-image: $gradiente-filtro,url(../images/principal22.jpg);
+    }
+    
+    /* HEADER */
+
+    /* texto principal */
+    .main-text h1 {
+        font-size: 4.5rem;
+    }
+    
+    .main-text p {
+        font-size: 2.5rem;
+    }
+
+    .contactLinks {
+        display: none;
+    }    
+    .menuBtn{
+        display: block;
+    }
+    .logoHeader {
+        padding: 6px 0 0px 15px;
+    }
+    .titulo2 {
+        font-size: 3.8rem;
+    }
+    .contenedorSectionIndex p,
+    .contenedorSectionIndex2 p {
+        font-size: 1.7rem;
+    }
+
+    /* MENU BURGER */
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        opacity: 0.9;
+        line-height: 3;
+        padding: 30px;
+        transform: translate(50px, 34px);        
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s,visibility 0s .5s;
+    }
+    .contactLinksMenu {
+        display: flex;
+        justify-content: center;
+    }
+    .contactLinksMenu a {
+        margin: 0 2rem 0 2rem;
+    }
+    .hr {
+        display: flex;
+        height: .1rem;
+        margin: 2rem 0 1rem 0;
+        background-color: $color-dorado3;
+        border: none;
+        width: 90%;
+        align-self: center;
+    }
+    .show {
+        /* transform: translate(650px,38px);  <--- alternativa de menú desplazable 
+        display: flex; */
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .2s;
+    }
+
+    nav ul li a{
+        font-size: 2.5rem;
+    }
+    /* SECTIONS */
+
+    .grid {
+        grid-template-columns: 1fr;
+    }    
+    .imgIndex {                /* <------ imágenes de sections */
+        width: 90%;
+        margin: 40px 0;
+    }
+    .contenedorSectionIndex2 div,
+    .contenedorSectionIndex {
+        max-width: 90%;
+    }
+    .contenedorSectionIndex,
+    .contenedorSectionIndex2 {
+        padding: 40px 0 60px 0;
+    }
+    .contenedorPrincipal h1 {        
+        font-size: 5.7rem;
+    }    
+    .contenedorPrincipal p {
+        font-size: 2.2rem;
+    }
+    .gridContenedor {
+        max-width: 90%;
+    }
+
+    .textFooter {
+        font-size: 1.2rem;
+    }
+
+    .contenedorSectionIndex2Turismo {
+        background-image: $gradiente-filtro,url(../images/turismo44.jpg);    }
+
+    /* FORM */
+    .form {
+        min-height: 60vh;
+    }
+    .inputContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 84%;
+    }
+    .inputText {
+        width: 84%;
+    }
+    #name,
+    #lastname,
+    #email {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form div input,
+    .inputText {
+        padding: 9px 7px 9px 7px;
+        font-size: 1.5rem;
+    }
+    #submit,
+    #reset {
+        font-size: 1.5rem;
+        padding: 8px 17px;
+    }  
+    #asunto {
+        padding: 9px 8px 9px 8px;
+        font-size: 1.5rem;
+        width: 83.4%;
+        background: white;
+    }
+
+    /* overlay bodega imagenes */
+    .overlay {
+        font-size: 3rem;
+        padding: .4rem .7rem;
+      }      
+}
