@@ -238,15 +238,18 @@ dl, ol, ul {
 * {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
   font-family: 'Poppins', sans-serif;
 }
 
 html {
   font-size: 62.5%;
   background-color: #ebebeb;
+}
+
+.extra, html {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
 }
@@ -842,7 +845,7 @@ input, select, textarea {
   }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 769px) {
   /* carrusel */
   .carousel-item:nth-child(3) {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url(../images/principal44.jpg);

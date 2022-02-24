@@ -36,7 +36,7 @@ dl, ol, ul {
     position: absolute;
     width: 100%;
     top: 40%;
-    color: $color-blanco;
+    color: map-get($mapaColores, 4);
 
     h1 {        
         font-size: 9rem;
@@ -51,17 +51,25 @@ dl, ol, ul {
 
 /* GLOBAL */
 
-* {
-    box-sizing: content-box;
+@mixin global() {
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;    
     font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: content-box;
+    -webkit-tap-highlight-color: transparent;
+    @include global();
 }
 
 html {
     font-size: 62.5%;  
     background-color: #ebebeb;
+    @extend .extra;
+}
+
+.extra {
     scroll-behavior: smooth;    
     font-family: 'Poppins', sans-serif;  
 }
@@ -570,7 +578,7 @@ input, select, textarea{
     }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 769px) {
     /* carrusel */
 
     .carousel-item:nth-child(3) {

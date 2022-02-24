@@ -1,0 +1,10 @@
+Cambios realizados entrega SASS II + SEO:
+
+1- Cambiados y mejorados los títulos de las páginas.
+2- Agregada etiquetas meta de descripción.
+3- Agregadas etiquetas meta keywords.
+4- Encabezados optimizados.
+5- Agregado mapa y get-map al proyecto.
+6- Agregado mixin e include.
+7- Reducido tamaño de fotos y optimizadas.
+8- Agregado .extend e @include.
